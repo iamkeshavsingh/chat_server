@@ -11,6 +11,7 @@ const cors = require("cors");
 const userRoutes = require("./routes/user.routes")
 const authRoutes = require("./routes/auth.routes")
 const channelRoutes = require("./routes/channel.routes")
+const messageRoutes = require('./routes/message.routes')
 
 var users = [];
 
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 app.use('/channel', channelRoutes)
+app.use('/message', messageRoutes);
 
 
 io.on('connection', socket => {

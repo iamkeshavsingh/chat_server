@@ -1,9 +1,11 @@
 const ChannelModel = require('../models/Channel.model');
 
 exports.createNewChannel = async function (req, res) {
-    var { senderId, receiverId } = req.body;
+    var { senderId, receiverId, senderName, receiverName } = req.body;
     var response = await ChannelModel.create({
-        channel: [senderId, receiverId]
+        channel: [senderId, receiverId],
+        user1: senderName,
+        user2: receiverName
     });
     return res.json(response)
 }

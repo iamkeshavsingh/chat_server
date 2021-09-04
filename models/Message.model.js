@@ -5,6 +5,8 @@ const MessageSchema = new Schema({
     channelId: String,
     senderId: String,
     text: String
+}, {
+    timestamps: true
 });
 
 

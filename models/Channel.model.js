@@ -2,7 +2,9 @@ const { Schema } = require('mongoose');
 const mongoose = require('../config/db.config')
 
 const ChannelSchema = new Schema({
-    channel: Array
+    channel: Array,
+    user1: String,
+    user2: String
 });
 
 
